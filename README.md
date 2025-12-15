@@ -49,3 +49,4 @@ If images are not found, placeholder images will be displayed automatically.
 - Smooth scrolling sections
 - No complex dependencies
 
+

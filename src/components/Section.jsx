@@ -13,3 +13,4 @@ const Section = ({ id, title, children, bgColor = 'bg-white' }) => {
 
 export default Section;
 
+
