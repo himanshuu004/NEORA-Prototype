@@ -29,6 +29,132 @@ const Home = () => {
     <div>
       <Hero />
 
+      {/* Director Information Section - Right after Hero */}
+      <Section title="Meet Our Director">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/5 p-8 md:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
+                <div className="w-full max-w-xs">
+                  <img
+                    src="/Director/director.png"
+                    alt="BASLP Priyanka Rawat - Director & Lead Therapist"
+                    className="w-full h-auto rounded-2xl shadow-2xl object-cover"
+                  />
+                </div>
+              </div>
+              <div className="md:w-3/5 p-8 md:p-12">
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3">👩‍⚕️</span>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+                      About the Director
+                    </h3>
+                  </div>
+                </div>
+                <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+                  BASLP Priyanka Rawat
+                </h4>
+                <p className="text-indigo-600 font-semibold mb-2 text-sm md:text-base">
+                  Founder – NEORA Therapy & Audiology Clinic
+                </p>
+                <p className="text-blue-600 font-semibold mb-6 text-sm md:text-base">
+                  Director & Lead Therapist
+                </p>
+                <div className="space-y-3 text-gray-700 leading-relaxed text-sm md:text-base">
+                  <p>
+                    BASLP Priyanka Rawat is the Director and Lead Therapist at NEORA. She is a qualified 
+                    and dedicated professional with a strong passion for helping individuals improve their 
+                    communication, learning, and daily life skills.
+                  </p>
+                  <p>
+                    She works with children and adults and believes that therapy should be personalised, 
+                    ethical, and focused on real progress, not just sessions. Her approach is holistic, 
+                    individual-centred, goal-oriented, and family-inclusive.
+                  </p>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold">
+                    BASLP Certified
+                  </span>
+                  <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold">
+                    Speech & Language Therapy
+                  </span>
+                  <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold">
+                    Audiology Specialist
+                  </span>
+                </div>
+                <div className="mt-8">
+                  <Link 
+                    to="/about" 
+                    className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 text-sm md:text-base"
+                  >
+                    Learn More About Our Director
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Gallery Preview Section */}
+      <Section title="Our Clinic Gallery" bgColor="bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center text-gray-600 mb-8 text-lg">
+            Take a look at our welcoming clinic environment and facilities
+          </p>
+          
+          {/* Gallery Grid - Show 6 images as preview */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            {[
+              '/images/005c7ff0-5885-426a-9a03-f846973c7987.JPG',
+              '/images/2296b393-0309-42ba-b6cc-405569f55368.JPG',
+              '/images/46d06ad3-baa1-4ea7-bdcb-37cff039943c.JPG',
+              '/images/494bd119-204d-4c5f-9b19-29fb0ae98677.JPG',
+              '/images/5bfe9bd1-6666-4281-8420-072ba3d40132.JPG',
+              '/images/79ab4111-df96-4bd8-806d-929e963fc0b2.JPG',
+            ].map((image, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer aspect-square"
+              >
+                <img
+                  src={image}
+                  alt={`Gallery preview ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            ))}
+          </div>
+
+          {/* View More Button */}
+          <div className="text-center">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+            >
+              <span>View Full Gallery</span>
+              <svg
+                className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
       <Section title="About Us">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -47,63 +173,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Director Section */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl overflow-hidden mt-12">
-            <div className="md:flex">
-              <div className="md:w-2/5 p-8 md:p-12 flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">
-                <div className="w-full max-w-xs">
-                  <img
-                    src="/Director/director.png"
-                    alt="Clinic Director"
-                    className="w-full h-auto rounded-2xl shadow-2xl object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:w-3/5 p-8 md:p-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-                  Meet Our Director
-                </h3>
-                <h4 className="text-xl md:text-2xl font-bold text-blue-600 mb-2">
-                  Dr. [Director Name]
-                </h4>
-                <p className="text-blue-600 font-semibold mb-6">
-                  Clinic Director & Lead Speech Therapist
-                </p>
-                <div className="space-y-3 text-gray-700 leading-relaxed text-sm md:text-base">
-                  <p>
-                    Dr. [Director Name] brings over 15 years of extensive experience in speech therapy 
-                    and audiology, with an unwavering passion for helping individuals overcome communication 
-                    challenges. She holds a Doctorate in Speech-Language Pathology and is certified in 
-                    multiple specialized treatment approaches.
-                  </p>
-                  <p>
-                    Her commitment to excellence and patient-centered care has made NEORA a trusted name 
-                    in the community. She believes in creating personalized treatment plans that address 
-                    each patient's unique needs while fostering a supportive and encouraging environment.
-                  </p>
-                </div>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold">
-                    Speech-Language Pathology
-                  </span>
-                  <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold">
-                    Audiology Specialist
-                  </span>
-                  <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-xs md:text-sm font-semibold">
-                    15+ Years Experience
-                  </span>
-                </div>
-                <div className="mt-8">
-                  <Link 
-                    to="/about" 
-                    className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 text-sm md:text-base"
-                  >
-                    Learn More About Our Director
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </Section>
 

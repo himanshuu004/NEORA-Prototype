@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
@@ -144,18 +145,18 @@ const Sessions = () => {
                   Contact us today to schedule your initial assessment
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="tel:+1234567890" 
+                  <Link 
+                    to="/book-session" 
                     className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transform hover:scale-105 transition-all duration-300"
                   >
                     Book Session
-                  </a>
-                  <a 
-                    href="mailto:contact@neora.com" 
+                  </Link>
+                  <Link 
+                    to="/contact" 
                     className="bg-blue-700/50 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 border-2 border-white/50"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Slider from './Slider';
 
@@ -8,12 +9,12 @@ const Hero = () => {
       
       {/* Book Session Button - Mobile (above slider) */}
       <div className="md:hidden container mx-auto px-4 pt-28 pb-6 flex justify-center">
-        <a 
-          href="tel:+1234567890" 
+        <Link 
+          to="/book-session" 
           className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
         >
           Book Session
-        </a>
+        </Link>
       </div>
 
       {/* Slider - Full screen on desktop, 60% on mobile */}
@@ -30,18 +31,18 @@ const Hero = () => {
               Your trusted partner for better communication and hearing health
             </p>
             <div className="flex gap-4 justify-center">
-              <a 
-                href="tel:+1234567890" 
+              <Link 
+                to="/book-session" 
                 className="bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-blue-50 transform hover:scale-105 transition-all duration-300"
               >
                 Book Session
-              </a>
-              <a 
-                href="mailto:contact@neora.com" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className="bg-blue-600/90 backdrop-blur-sm text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 border-2 border-white/50"
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>

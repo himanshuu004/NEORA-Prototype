@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Section from '../components/Section';
 import Footer from '../components/Footer';
@@ -5,45 +6,66 @@ import Footer from '../components/Footer';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah M.",
+      name: "Priya Sharma",
       role: "Parent",
       image: "👩",
-      text: "The team at NEORA has been incredibly supportive. My child's speech has improved significantly since starting therapy here. The therapists are patient, understanding, and truly care about our progress.",
+      text: "NEORA ki team bahut supportive hai. Meri beti ki speech mein bohot improvement aayi hai. The therapists are very patient and understanding. Main unke progress se bahut khush hoon.",
       rating: 5
     },
     {
-      name: "John D.",
+      name: "Rajesh Kumar",
       role: "Patient",
       image: "👨",
-      text: "Professional, caring, and effective. I highly recommend their audiology services to anyone in need. The hearing aid fitting process was smooth, and the follow-up care has been exceptional.",
+      text: "Professional aur caring team hai. Maine unke audiology services use kiye aur hearing aid fitting process bahut smooth tha. Follow-up care bhi excellent hai. Highly recommend!",
       rating: 5
     },
     {
-      name: "Emily R.",
+      name: "Anita Patel",
       role: "Parent",
       image: "👩",
-      text: "Our experience with NEORA has been outstanding. The speech therapy sessions are engaging for my son, and we've seen remarkable progress in just a few months. Thank you for everything!",
+      text: "NEORA mein hamara experience outstanding raha hai. Speech therapy sessions bahut engaging hain aur mere bete ka progress dekh kar main bahut khush hoon. Thank you so much!",
       rating: 5
     },
     {
-      name: "Michael T.",
+      name: "Vikram Singh",
       role: "Patient",
       image: "👨",
-      text: "After my stroke, I was struggling with communication. The team at NEORA helped me regain my confidence and communication skills. I'm grateful for their expertise and compassion.",
+      text: "Stroke ke baad communication mein problem ho rahi thi. NEORA ki team ne meri confidence wapas laane mein madad ki. Unka expertise aur compassion bahut helpful raha. Main unka aabhari hoon.",
       rating: 5
     },
     {
-      name: "Lisa K.",
+      name: "Sunita Reddy",
       role: "Parent",
       image: "👩",
-      text: "The pediatric services at NEORA are excellent. They work closely with us and my daughter's school to ensure continuity of care. The therapists are knowledgeable and create a fun, supportive environment.",
+      text: "Pediatric services bahut acchi hain. Wo hamare saath aur school ke saath bhi coordinate karte hain. The therapists are knowledgeable aur supportive environment banate hain. Very happy!",
       rating: 5
     },
     {
-      name: "David P.",
+      name: "Amit Verma",
       role: "Patient",
       image: "👨",
-      text: "I've been using their telehealth services, and it's been incredibly convenient. The quality of care is just as good as in-person sessions. Highly recommend for busy schedules!",
+      text: "Telehealth services use kar raha hoon aur yeh bahut convenient hai. Quality of care bilkul same hai jaise in-person sessions. Busy schedule wale logon ke liye perfect hai.",
+      rating: 5
+    },
+    {
+      name: "Deepika Mehta",
+      role: "Parent",
+      image: "👩",
+      text: "My son was struggling with stammering, but after therapy at NEORA, uska confidence badh gaya hai. Priyanka mam ka approach bahut systematic hai. Therapy se real improvement dikh rahi hai.",
+      rating: 5
+    },
+    {
+      name: "Ramesh Agarwal",
+      role: "Parent",
+      image: "👨",
+      text: "Autism ke liye therapy chahiye thi. NEORA mein unki approach bahut holistic hai - family ko bhi involve karte hain. Progress tracking bhi regular hoti hai. Very professional team.",
+      rating: 5
+    },
+    {
+      name: "Kavita Desai",
+      role: "Parent",
+      image: "👩",
+      text: "Meri chhoti beti ko language delay thi. NEORA mein therapy start ki aur ab wo words clearly bol rahi hai. Therapists sabse acche hain aur har session mein improvement dikhti hai.",
       rating: 5
     }
   ];
@@ -109,18 +131,18 @@ const Testimonials = () => {
               and hearing with NEORA's expert care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+1234567890" 
+              <Link 
+                to="/book-session" 
                 className="bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transform hover:scale-105 transition-all duration-300"
               >
                 Book Your Session
-              </a>
-              <a 
-                href="mailto:contact@neora.com" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className="bg-blue-700/50 backdrop-blur-sm text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 border-2 border-white/50"
               >
                 Get in Touch
-              </a>
+              </Link>
             </div>
           </div>
         </div>
