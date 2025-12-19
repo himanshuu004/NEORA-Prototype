@@ -57,24 +57,24 @@ const Services = () => {
       </div>
 
       <Section title="What We Offer" bgColor="bg-gray-50">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
+          {services.slice(0, 4).map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group"
             >
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-6">
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-4 sm:p-6">
+                <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">{service.icon}</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white">{service.title}</h3>
               </div>
-              <div className="p-6">
-                <p className="text-gray-600 mb-6 leading-relaxed">
+              <div className="p-4 sm:p-6">
+                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-gray-700">
-                      <svg className="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <li key={idx} className="flex items-start text-sm sm:text-base text-gray-700">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       <span>{feature}</span>
@@ -82,8 +82,8 @@ const Services = () => {
                   ))}
                 </ul>
               </div>
-              <div className="px-6 pb-6">
-                <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform group-hover:scale-105">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform group-hover:scale-105 text-sm sm:text-base min-h-[44px]">
                   Learn More
                 </button>
               </div>
